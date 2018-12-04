@@ -18,7 +18,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="test">
 <meta property="og:url" content="http://yoursite.com/2018/12/04/test/index.html">
-<meta property="og:site_name" content="…幻想の彼方へ…">
+<meta property="og:site_name" content="←幻想の彼方へ→">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-12-03T16:45:36.713Z">
 <meta name="twitter:card" content="summary">
@@ -27,7 +27,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="…幻想の彼方へ…" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="←幻想の彼方へ→" type="application/atom+xml">
 
 
 
@@ -54,7 +54,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>test | …幻想の彼方へ…</title>
+<title>test | ←幻想の彼方へ→</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -166,9 +166,9 @@
                     <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa bilibili" href="http://space.bilibili.com/17184" title="bilibili"></a>
                             
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                                <a class="fa LOFTER" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
                             
                                 <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
@@ -242,9 +242,9 @@
             <nav class="header-nav">
                         <ul class="social">
                             
-                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                                <a class="fa bilibili" target="_blank" href="http://space.bilibili.com/17184" title="bilibili"></a>
                             
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                                <a class="fa LOFTER" target="_blank" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
                             
                                 <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
@@ -367,7 +367,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"test　| …幻想の彼方へ…　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"test　| ←幻想の彼方へ→　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -490,6 +490,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "☯ 幻想の彼方へ ☯" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "✲ Rondo of fantasy ✲" + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
