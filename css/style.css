@@ -880,6 +880,12 @@ a {
   -moz-background-size: 103%;
   background-size: 103%;
 }
+#header .header-nav .social .Mastodon {
+  background: url("/img/Mastodon.png") center no-repeat #3088d4;
+  -webkit-background-size: 80%;
+  -moz-background-size: 80%;
+  background-size: 80%;
+}
 #header .header-nav .social .GitHub {
   background: url("//cdn.bootcss.com/logos/0.2.0/github-octocat.svg") no-repeat #fff;
   -webkit-background-size: 90%;
