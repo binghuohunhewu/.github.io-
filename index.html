@@ -74,12 +74,14 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -106,6 +108,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -231,7 +240,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/04/test/">test</a>
+      <a class="article-title" href="/2018/12/04/test/">coc trpg replay　个人口味收集整理</a>
     </h1>
   
 
@@ -241,7 +250,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+              coc跑团replay视频的b站地址收集和个人推荐。最后更新2018.5.7。
+          
       
     </div>
     
@@ -250,6 +260,14 @@
       
 
       
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/coc/">coc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/trpg/">trpg</a></li></ul>
+    </div>
+
+      
+        <p class="article-more-link">
+          <a href="/2018/12/04/test/#more">阅读全文 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -286,7 +304,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/12/02/test-my-site/">test_my_site</a>
+      <a class="article-title" href="/2018/12/02/test-my-site/">博客搭好啦！(°∀°)ﾉ</a>
     </h1>
   
 
@@ -296,7 +314,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <p>第一次尝试自己搭博客，虽然过程对一个代码白痴纯新手来说简直是跌跌撞撞到没法看，好歹把它给搞上线发出来啦！<br>还有些细节没修正，晚点会开始把之前博客里的东西都搬运过来。<br>回头等减价去买个域名绑定一下233</p>
+<p>另：回头这里会放个提示（。</p>
+
       
     </div>
     

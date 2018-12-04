@@ -73,12 +73,14 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: true
     }
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -105,6 +107,13 @@
 
         
 
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
         
 
 
@@ -282,7 +291,7 @@
         
             <div id="article-nav-newer" class="article-nav-title">
                 <a href="/2018/12/02/test-my-site/">
-                    test_my_site
+                    博客搭好啦！(°∀°)ﾉ
                 </a>
             </div>
         
@@ -351,7 +360,7 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2018/12/02/test-my-site/" title="上一篇: test_my_site">
+            <a href="/2018/12/02/test-my-site/" title="上一篇: 博客搭好啦！(°∀°)ﾉ">
                 <i class="fa fa-angle-left"></i>
             </a>
         
@@ -363,7 +372,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/test/">test</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test-my-site/">test_my_site</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/12/04/test/">coc trpg replay　个人口味收集整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/02/test-my-site/">博客搭好啦！(°∀°)ﾉ</a></li></ul>
 
 
 
