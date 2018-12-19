@@ -70,7 +70,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: false
+        search: true
     }
 </script>
 
@@ -105,6 +105,13 @@
         
 
         
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+        
 
 
         
@@ -135,8 +142,6 @@
                                 <a class="fa LOFTER" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
                             
                                 <a class="fa Mastodon" href="https://cmx.im/@binghuohunhewu" title="Mastodon"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
                     </nav>
@@ -191,8 +196,6 @@
                                 <a class="fa LOFTER" target="_blank" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
                             
                                 <a class="fa Mastodon" target="_blank" href="https://cmx.im/@binghuohunhewu" title="Mastodon"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
                             
                         </ul>
             </nav>
