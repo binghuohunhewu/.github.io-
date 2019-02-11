@@ -348,6 +348,33 @@
     </entry>
     
     <entry>
+      <title>弹幕新坑记录</title>
+      <link href="/2018/12/12/darlingstar/"/>
+      <url>/2018/12/12/darlingstar/</url>
+      
+        <content type="html"><![CDATA[<h3 id="2018年"><a href="#2018年" class="headerlink" title="2018年"></a>2018年</h3><p>1.选曲确定。模式：m9 bas。主要是练手。</p><p>2.以往的黑屏白屏现在没有意义了，需要的时候直接弹幕覆盖全程就ok。</p><p>3.顺便自力更生学习了一下做视频渲染和压制……其实没怎么学，小丸工具箱傻瓜式程序一键输出，好使！</p><p>4.目前m9 BAS还在完善之中，现在体会到的与m7最大的不同：字号改变、轴旋转和颜色变换是渐变模式，带过程，加上锚点调整之后实际上已经可以做成缩放和旋转动画了。</p><p>5.下午也看了很多早年nico作品和近年b站m8作品，最显著的感想是“立体化”。通过字号大小、颜色明暗加上缩放旋转动画所营造出的3D感，使得弹幕作品由平面走向立体，整体视觉效果有很大改变。以前m7只有轻微尝试过，没有缩放所以也没真正入手去搞，跟大触一比我就是条死咸鱼，好方……</p><p>6.动态文字/动态字体艺术，这个关键词下的视频值得参考。然而m9 bas现在还不支持模糊和压扁（233），模糊只好手动搞了……</p><p>7.晚上在毛群问了外发光效果。可以尝试。说起来这点a站滤镜优势大得很啊。</p><p>8.路径绘图，晚点参考一下光驱提供的方法。</p><p>9.终于还是开了个小号，先试投了视频……就这个了，未来的测试专用号www</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕研究 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> m9 BAS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>《Byebye Yesterday》制作记录</title>
       <link href="/2018/12/11/byebyeyesterday/"/>
       <url>/2018/12/11/byebyeyesterday/</url>
@@ -366,9 +393,9 @@
             
             <tag> 高级弹幕 </tag>
             
-            <tag> m7特殊弹幕 </tag>
-            
             <tag> bilibili </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
@@ -393,9 +420,9 @@
             
             <tag> 高级弹幕 </tag>
             
-            <tag> m7特殊弹幕 </tag>
-            
             <tag> bilibili </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
@@ -420,13 +447,13 @@
             
             <tag> 高级弹幕 </tag>
             
-            <tag> 普权弹幕 </tag>
-            
-            <tag> m7特殊弹幕 </tag>
+            <tag> bilibili </tag>
             
             <tag> m8代码弹幕 </tag>
             
-            <tag> bilibili </tag>
+            <tag> 普权弹幕 </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
@@ -476,9 +503,9 @@
             
             <tag> 高级弹幕 </tag>
             
-            <tag> m8代码弹幕 </tag>
-            
             <tag> bilibili </tag>
+            
+            <tag> m8代码弹幕 </tag>
             
         </tags>
       
