@@ -98,11 +98,9 @@
       
         <tags>
             
-            <tag> 弹幕 </tag>
-            
             <tag> 高级弹幕 </tag>
             
-            <tag> Bilibili </tag>
+            <tag> bilibili </tag>
             
             <tag> m9 BAS </tag>
             
@@ -366,11 +364,11 @@
       
         <tags>
             
-            <tag> 弹幕 </tag>
-            
             <tag> 高级弹幕 </tag>
             
-            <tag> Bilibili </tag>
+            <tag> bilibili </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
@@ -393,13 +391,15 @@
       
         <tags>
             
-            <tag> 弹幕 </tag>
-            
             <tag> 高级弹幕 </tag>
             
-            <tag> Bilibili </tag>
+            <tag> bilibili </tag>
+            
+            <tag> m8代码弹幕 </tag>
             
             <tag> 普权弹幕 </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
@@ -447,11 +447,9 @@
       
         <tags>
             
-            <tag> 弹幕 </tag>
-            
             <tag> 高级弹幕 </tag>
             
-            <tag> Bilibili </tag>
+            <tag> bilibili </tag>
             
             <tag> m8代码弹幕 </tag>
             
@@ -503,7 +501,7 @@
       
         <tags>
             
-            <tag> Bilibili </tag>
+            <tag> bilibili </tag>
             
             <tag> coc </tag>
             
