@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://binghuohunhewu.com/"/>
-  <updated>2019-12-01T16:56:32.635Z</updated>
+  <updated>2020-03-02T18:10:29.493Z</updated>
   <id>https://binghuohunhewu.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>针对产出者的自搭博客选择指南</title>
+    <link href="https://binghuohunhewu.com/2020/03/02/personalblog/"/>
+    <id>https://binghuohunhewu.com/2020/03/02/personalblog/</id>
+    <published>2020-03-02T13:59:27.000Z</published>
+    <updated>2020-03-02T18:10:29.493Z</updated>
+    
+    <summary type="html">
+    
+      针对产出者的自搭博客选择指南（施工中）。本文由外行人综合整理，如有纰漏还请指出，多谢。
+    
+    </summary>
+    
+      <category term="杂七杂八" scheme="https://binghuohunhewu.com/categories/%E6%9D%82%E4%B8%83%E6%9D%82%E5%85%AB/"/>
+    
+    
+      <category term="有感而发" scheme="https://binghuohunhewu.com/tags/%E6%9C%89%E6%84%9F%E8%80%8C%E5%8F%91/"/>
+    
+      <category term="自搭博客" scheme="https://binghuohunhewu.com/tags/%E8%87%AA%E6%90%AD%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>跳转弹幕·东方推荐刊 ☯31</title>
@@ -483,30 +505,6 @@
       <category term="SOUND HOLIC" scheme="https://binghuohunhewu.com/tags/SOUND-HOLIC/"/>
     
       <category term="709sec." scheme="https://binghuohunhewu.com/tags/709sec/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《before the dawn》歌词</title>
-    <link href="https://binghuohunhewu.com/2019/03/24/20190324gc/"/>
-    <id>https://binghuohunhewu.com/2019/03/24/20190324gc/</id>
-    <published>2019-03-24T14:46:07.000Z</published>
-    <updated>2019-03-26T14:53:48.885Z</updated>
-    
-    <summary type="html">
-    
-      aki—《before the dawn》歌词
-    
-    </summary>
-    
-      <category term="歌词收集" scheme="https://binghuohunhewu.com/categories/%E6%AD%8C%E8%AF%8D%E6%94%B6%E9%9B%86/"/>
-    
-    
-      <category term="东方project同人曲" scheme="https://binghuohunhewu.com/tags/%E4%B8%9C%E6%96%B9project%E5%90%8C%E4%BA%BA%E6%9B%B2/"/>
-    
-      <category term="SOUND HOLIC" scheme="https://binghuohunhewu.com/tags/SOUND-HOLIC/"/>
-    
-      <category term="aki" scheme="https://binghuohunhewu.com/tags/aki/"/>
     
   </entry>
   
