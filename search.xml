@@ -7,7 +7,7 @@
       <link href="/2020/03/02/personalblog/"/>
       <url>/2020/03/02/personalblog/</url>
       
-        <content type="html"><![CDATA[<blockquote><p>以下内容由（既没学过代码也没有程序基础，只是自己搭过博客的）博主综合整理写成，鉴于博主确实是个真·外行，以下内容不可避免地会出现疏漏和错误，有些专用名词也用得不太准确，如果有行家看出问题，还请多多指点，谢谢。</p></blockquote><p><strong>特别感谢：在本文整理过程中出谋划策的大佬们</strong></p><h1 id="为什么要自己搭博客？"><a href="#为什么要自己搭博客？" class="headerlink" title="为什么要自己搭博客？"></a>为什么要自己搭博客？</h1><blockquote><p>明明有那么多的在线博客，注册一下就能用了，还是傻瓜式后台，为什么非要费时费力地自己搭博客呢？</p></blockquote><p>有段时间，产出太太们都喜欢用废柴兔——然后它被墙了。<br>然后有段时间，大家都在用博客大巴——然后博客大巴关站了。<br>曾在写手们中间风靡一时、被用来存放同人文产出的不老歌，因为政策问题，不得不谢绝了所有非日记类博文。<br>百度空间，已经消失在历史长河里了。<br>Pixiv也可以放小说的哦？……墙了。<br>lofter，博文改了八百圈都发不出去搞得满脑袋火，还不知道到底哪个是敏感词。<br>晋江，就不说脖子以下和各种奇妙操作了，蹲□□子、影□□之类的打码时有出现，影响阅读顺畅性。<br>AO3？我不就是因为这事才来写的这个整理吗（血流满面.jpg）</p><p>结论：有些网站不靠谱，有些网站还算靠谱但是打不过老大哥，与其在各个网站中间来回流浪到处搬家，不如给自己搞个可以安心的窝，这样……哪怕还要继续流浪也有底气了是吧囧<br><br></p><h1 id="自搭博客需要做什么准备？"><a href="#自搭博客需要做什么准备？" class="headerlink" title="自搭博客需要做什么准备？"></a>自搭博客需要做什么准备？</h1><p><br></p><h2 id="时间和精力以及耐心"><a href="#时间和精力以及耐心" class="headerlink" title="时间和精力以及耐心"></a>时间和精力以及耐心</h2><p>与在线博客网站不同，自搭博客是要从零开始的。<br>即使网络上有很多傻瓜式教程，你一步一步照抄下来就能成功，也可能会面对“为什么会出bug？！问题在哪？！我写的代码跟教程一模一样啊？！……哦我把代码的英文冒号写成中文冒号了”这样的令人无语的问题，请做好心理准备。<br><br></p><h2 id="准备三大要件"><a href="#准备三大要件" class="headerlink" title="准备三大要件"></a>准备三大要件</h2><p>一个能被大家看到的自搭博客通常由三个要件组成：<br>【能进入这个博客的办法】、【搭建起博客的系统】、【存放系统和你的博文的网络空间】。</p><h3 id="域名、IP"><a href="#域名、IP" class="headerlink" title="域名、IP"></a>域名、IP</h3><p>想找到一幢房子，需要知道房子的经纬度，或者是写着所在街道和门牌号的地址。<br>IP由数字串组成（比如123.456.789.10这样的格式），如同经纬度，精确地指出了你的博客所在的位置，可以用ip进入博客（我记得早年A站只用ip用了好长时间？），但是因为是纯数字，可能不太方便记忆。<br>有没有像街道和门牌号一样，相对较方便的记法呢？这个时候需要域名。起一个比较记得住的域名，把域名和ip进行绑定和对应，就可以通过域名进入站点了。一个站点可能有很多个域名，也可能有主次或者主要和备用之分，但是指向的都一样是这个站点。<br>举例：AO3的主域名被墙了，但是用副域名仍然可以进入首页，虽然域名不一样，进入的都是这一个站。<br>结论：为了能让其他人访问你的博客，你需要一个IP地址，也可以给这个ip绑定一个（或者几个）域名。</p><h3 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h3><p>不同的博客系统，使用方法也不尽相同。<br>最常见的应该是wordpress？用这个的人很多，各种大佬开发的小插件之类也不少，可以想怎么折腾就怎么折腾。<br>另外我现在这个博客用的是hexo，我个人感觉用得还挺开心的，但是确实比wp麻烦23333<br>mooncellwiki群里的大佬们提到的其他博客系统：Typecho，jekyll，vblog。</p><h3 id="空间（服务器）"><a href="#空间（服务器）" class="headerlink" title="空间（服务器）"></a>空间（服务器）</h3><p>博文和博客系统需要存放在服务器空间里。<br>根据使用的博客系统的不同，有些博客系统需要你在特定的网站注册一些帐号，另外一些博客系统则需要你拥有服务器空间。<br>上文所说的hexo、jekyll和vblog是基于github网站的系统，需要注册github帐号。wordpress系统需要服务器空间。</p><h1 id="根据自己的需求作出选择"><a href="#根据自己的需求作出选择" class="headerlink" title="根据自己的需求作出选择"></a>根据自己的需求作出选择</h1><h2 id="域名一定要有吗？怎么获得？"><a href="#域名一定要有吗？怎么获得？" class="headerlink" title="域名一定要有吗？怎么获得？"></a>域名一定要有吗？怎么获得？</h2><ul><li>如前段所述，即使没有域名，有ip（或者二级域名）也是可以进入博客的，所以<font color="#ff0000">“搞个新域名”不是必须的</font>，请大家根据自身情况<s>（钱包充盈度）</s>自行选择。</li><li>如果你很想搞一个“高大上的只属于我的特别的域名”，你需要去贩卖域名的网站，出点钱把你心爱的域名买回来。</li><li>大陆和大陆以外都有域名贩卖的网站，基本上有以下区别：<ul><li>大陆：便宜，一个域名大概几块十几块一年，但是购买时需要实名认证（服务器空间在大陆时需要备案）。</li><li>以外：稍贵，一年约五六十块，需要填写信息但是不需要实名认证也不需要备案。</li></ul></li><li>大陆反正哪家都要实名我就不推荐了大家随便看着买，大陆以外我在用namesilo，推荐一下。</li><li><font color="#ff0000">日常发车选手，安全起见就别在大陆买域名了，不然直接实名了……</font></li><li>关于“我欢天喜地买了个新域名但是该怎么绑定到博客上？！”，以域名贩卖网站的名字为关键词在搜索引擎里搜索，可获得大量教程w<br><br></li></ul><h2 id="wordpress和hexo，两者各有什么优缺点？"><a href="#wordpress和hexo，两者各有什么优缺点？" class="headerlink" title="wordpress和hexo，两者各有什么优缺点？"></a>wordpress和hexo，两者各有什么优缺点？</h2><h3 id="wordpress"><a href="#wordpress" class="headerlink" title="wordpress"></a>wordpress</h3><ul><li>优点：方便快捷傻瓜式，可视化后台界面，适合没基础的人。</li><li>缺点：<ul><li>建成的博客有ip没有域名，要域名需要另外付费。</li><li>即使不打算购买域名要用ip裸奔，也需要付费来购买服务器空间（大概每个月二十多块人民币，一年二三百块钱）。</li></ul></li><li>推荐流程BYmooncellwiki群大佬们：在阿里云（轻量？），购买vps（云服务器？），选择大陆以外的服务器（比如香港、新加坡的），根据教程下载软件，架构WordPress / Typecho博客系统。</li><li>自搭教程，来自知乎，亲测ok：<a href="https://zhuanlan.zhihu.com/p/52846071" target="_blank" rel="noopener">一键建站系列教程（宝塔面板+wordpress）</a></li><li>发车选手请务必购买大陆以外服务器OTZ</li></ul><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ul><li>优点：……免费。因为是在github注册帐号，自带了一个二级域名和空间，所以不想出钱的话可以完全免费。</li><li>缺点：<ul><li>属于静态博客，只能在固定的某台电脑上进行推送更新，使用者最好有自己的电脑，有的系统也不支持手机更新博客。</li><li>安装过程比较折腾，没有可视化后台，与wordpress相比不够傻瓜。</li><li>github曾经被墙后来又被放出来了……有一定风险度</li></ul></li><li>整体流程：注册github帐号，然后按照博客系统的搭建说明，下载软件和写代码，最后推送至网页。</li><li>自搭教程，我就是看着这个搭出来了现在这个博客：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></li><li>github禁止色情内容并且拒绝童车。大概不会管中文这边（毕竟我曾经路过了一篇男性向小黄文），但是请大家尽量尊重一下吧……<br><br></li></ul><h2 id="个人博客的备案问题？"><a href="#个人博客的备案问题？" class="headerlink" title="个人博客的备案问题？"></a>个人博客的备案问题？</h2><p>不要域名只用ip：无论服务器在大陆还是大陆以外都不需要备案。<br>使用域名且服务器空间在大陆：需要备案。<br>大陆买的域名，服务器在大陆以外：不用备案。<br>——以上总结来自mooncellwiki群大佬们</p><p>……然而但凡是在大陆网站买的，无论买域名还是买服务器空间，都是要实名制的……开车小伙伴请心里有个数（扭头</p><hr><p>时间太晚先写到这里，肯定有错误和漏写的东西等我明天再修改囧</p>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>以下内容由（既没学过代码也没有程序基础，只是自己搭过博客的）博主综合整理写成，鉴于博主确实是个真·外行，以下内容不可避免地会出现疏漏和错误，有些专用名词也用得不太准确，如果有行家看出问题，还请多多指点，谢谢。</p></blockquote><p><strong>特别感谢：在本文整理过程中出谋划策的大佬们</strong></p><h1 id="为什么要自己搭博客？"><a href="#为什么要自己搭博客？" class="headerlink" title="为什么要自己搭博客？"></a>为什么要自己搭博客？</h1><blockquote><p>明明有那么多的在线博客，注册一下就能用了，还是傻瓜式后台，为什么非要费时费力地自己搭博客呢？</p></blockquote><p>有段时间，产出太太们都喜欢用废柴兔——然后它被墙了。<br>然后有段时间，大家都在用博客大巴——然后博客大巴关站了。<br>曾在写手们中间风靡一时、被用来存放同人文产出的不老歌，因为政策问题，不得不谢绝了所有非日记类博文。<br>百度空间，已经消失在历史长河里了。<br>Pixiv也可以放小说的哦？……墙了。<br>lofter，博文改了八百圈都发不出去搞得满脑袋火，还不知道到底哪个是敏感词。<br>晋江，就不说脖子以下和各种奇妙操作了，蹲□□子、影□□之类的打码时有出现，影响阅读顺畅性。<br>AO3？我不就是因为这事才来写的这个整理吗（血流满面.jpg）</p><p>结论：有些网站不靠谱，有些网站还算靠谱但是打不过老大哥，与其在各个网站中间来回流浪到处搬家，不如给自己搞个可以安心的窝，这样……哪怕还要继续流浪也有底气了是吧囧<br><br></p><h1 id="自搭博客需要做什么准备？"><a href="#自搭博客需要做什么准备？" class="headerlink" title="自搭博客需要做什么准备？"></a>自搭博客需要做什么准备？</h1><p><br></p><h2 id="时间和精力以及耐心"><a href="#时间和精力以及耐心" class="headerlink" title="时间和精力以及耐心"></a>时间和精力以及耐心</h2><p>与在线博客网站不同，自搭博客是要从零开始的。<br>即使网络上有很多傻瓜式教程，你一步一步照抄下来就能成功，也可能会面对“为什么会出bug？！问题在哪？！我写的代码跟教程一模一样啊？！……哦我把代码的英文冒号写成中文冒号了”这样的令人无语的问题，请做好心理准备。<br><br></p><h2 id="准备三大要件"><a href="#准备三大要件" class="headerlink" title="准备三大要件"></a>准备三大要件</h2><p>一个能被大家看到的自搭博客通常由三个要件组成：<br>【能进入这个博客的办法】、【搭建起博客的系统】、【存放系统和你的博文的网络空间】。</p><h3 id="域名、IP"><a href="#域名、IP" class="headerlink" title="域名、IP"></a>域名、IP</h3><p>想找到一幢房子，需要知道房子的经纬度，或者是写着所在街道和门牌号的地址。<br>IP由数字串组成（比如123.456.789.10这样的格式），如同经纬度，精确地指出了你的博客所在的位置，可以用ip进入博客（我记得早年A站只用ip用了好长时间？），但是因为是纯数字，可能不太方便记忆。<br>有没有像街道和门牌号一样，相对较方便的记法呢？这个时候需要域名。起一个比较记得住的域名，把域名和ip进行绑定和对应，就可以通过域名进入站点了。一个站点可能有很多个域名，也可能有主次或者主要和备用之分，但是指向的都一样是这个站点。<br>举例：AO3的主域名被墙了，但是用副域名仍然可以进入首页，虽然域名不一样，进入的都是这一个站。<br>结论：为了能让其他人访问你的博客，你需要一个IP地址，也可以给这个ip绑定一个（或者几个）域名。</p><h3 id="博客框架"><a href="#博客框架" class="headerlink" title="博客框架"></a>博客框架</h3><p>不同的博客系统，使用方法也不尽相同。<br>最常见的应该是wordpress？用这个的人很多，各种大佬开发的小插件之类也不少，可以想怎么折腾就怎么折腾。<br>另外我现在这个博客用的是hexo，我个人感觉用得还挺开心的，但是确实比wp麻烦23333<br>mooncellwiki群里的大佬们提到的其他博客系统：Typecho，jekyll，vblog。</p><h3 id="空间（服务器）"><a href="#空间（服务器）" class="headerlink" title="空间（服务器）"></a>空间（服务器）</h3><p>博文和博客系统需要存放在服务器空间里。<br>根据使用的博客系统的不同，有些博客系统需要你在特定的网站注册一些帐号，另外一些博客系统则需要你拥有服务器空间。<br>上文所说的hexo、jekyll和vblog是基于github网站的系统，需要注册github帐号。wordpress系统需要服务器空间。</p><h1 id="根据自己的需求作出选择"><a href="#根据自己的需求作出选择" class="headerlink" title="根据自己的需求作出选择"></a>根据自己的需求作出选择</h1><h2 id="域名一定要有吗？怎么获得？"><a href="#域名一定要有吗？怎么获得？" class="headerlink" title="域名一定要有吗？怎么获得？"></a>域名一定要有吗？怎么获得？</h2><ul><li>如前段所述，即使没有域名，有ip（或者二级域名）也是可以进入博客的，所以<font color="#ff0000">“搞个新域名”不是必须的</font>，请大家根据自身情况<s>（钱包充盈度）</s>自行选择。</li><li>如果你很想搞一个“高大上的只属于我的特别的域名”，你需要去贩卖域名的网站，出点钱把你心爱的域名买回来。</li><li>大陆和大陆以外都有域名贩卖的网站，基本上有以下区别：<ul><li>大陆：便宜，一个域名大概几块十几块一年，但是购买时需要实名认证（服务器空间在大陆时需要备案）。</li><li>以外：稍贵，一年约五六十块，需要填写信息但是不需要实名认证也不需要备案。</li></ul></li><li>大陆反正哪家都要实名我就不推荐了大家随便看着买，大陆以外我在用namesilo，推荐一下。</li><li><font color="#ff0000">日常发车选手，安全起见就别在大陆买域名了，不然直接实名了……</font></li><li>关于“我欢天喜地买了个新域名但是该怎么绑定到博客上？！”，以域名贩卖网站的名字为关键词在搜索引擎里搜索，可获得大量教程w<br><br></li></ul><h2 id="wordpress和hexo，两者各有什么优缺点？"><a href="#wordpress和hexo，两者各有什么优缺点？" class="headerlink" title="wordpress和hexo，两者各有什么优缺点？"></a>wordpress和hexo，两者各有什么优缺点？</h2><h3 id="wordpress"><a href="#wordpress" class="headerlink" title="wordpress"></a>wordpress</h3><ul><li>优点：方便快捷傻瓜式，可视化后台界面，适合没基础的人。</li><li>缺点：<ul><li>建成的博客有ip没有域名，要域名需要另外付费。</li><li>即使不打算购买域名要用ip裸奔，也需要付费来购买服务器空间（大概每个月二十多块人民币，一年二三百块钱）。</li></ul></li><li>推荐流程BYmooncellwiki群大佬们：在阿里云（轻量？），购买vps（云服务器？），选择大陆以外的服务器（比如香港、新加坡的），根据教程下载软件，架构WordPress / Typecho博客系统。</li><li>自搭教程，来自知乎，亲测ok：<a href="https://zhuanlan.zhihu.com/p/52846071" target="_blank" rel="noopener">一键建站系列教程（宝塔面板+wordpress）</a></li><li>发车选手请务必购买大陆以外服务器OTZ</li></ul><h3 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h3><ul><li>优点：……免费。因为是在github注册帐号，自带了一个二级域名和空间，所以不想出钱的话可以完全免费。</li><li>缺点：<ul><li>属于静态博客，只能在固定的某台电脑上进行推送更新，使用者最好有自己的电脑，有的系统也不支持手机更新博客。</li><li>安装过程比较折腾，没有可视化后台，与wordpress相比不够傻瓜。</li><li>github曾经被墙后来又被放出来了……加载速度稍慢，有一定风险</li></ul></li><li>整体流程：注册github帐号，然后按照博客系统的搭建说明，下载软件和写代码，最后推送至网页。</li><li>自搭教程，我就是看着这个搭出来了现在这个博客：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></li><li>github禁止色情内容并且拒绝童车。大概不会管中文这边（毕竟我曾经路过了一篇男性向小黄文），但是请大家尽量尊重一下吧……<br><br></li></ul><h2 id="个人博客的备案问题？"><a href="#个人博客的备案问题？" class="headerlink" title="个人博客的备案问题？"></a>个人博客的备案问题？</h2><p>不要域名只用ip：无论服务器在大陆还是大陆以外都不需要备案。<br>使用域名且服务器空间在大陆：需要备案。<br>大陆买的域名，服务器在大陆以外：不用备案。<br>——以上总结来自mooncellwiki群大佬们</p><p>……然而但凡是在大陆网站买的，无论买域名还是买服务器空间，都是要实名制的……开车小伙伴请心里有个数（扭头</p><hr><p>时间太晚先写到这里，肯定有错误和漏写的东西等我明天再修改囧</p>]]></content>
       
       
       <categories>
@@ -22,6 +22,180 @@
             <tag> 有感而发 </tag>
             
             <tag> 自搭博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯37</title>
+      <link href="/2020/03/02/TBRW37/"/>
+      <url>/2020/03/02/TBRW37/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯37</strong></p><p><a href="https://www.bilibili.com/video/av92988341" target="_blank" rel="noopener">https://www.bilibili.com/video/av92988341</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>明明设置定时投稿了，阿b居然没能准时审核完囧</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯36</title>
+      <link href="/2020/02/16/TBRW36/"/>
+      <url>/2020/02/16/TBRW36/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯36</strong></p><p><a href="https://www.bilibili.com/video/av89455687" target="_blank" rel="noopener">https://www.bilibili.com/video/av89455687</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>情！人！节！……虽然大家肯定都是在家过的！（。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯35</title>
+      <link href="/2020/02/01/TBRW35/"/>
+      <url>/2020/02/01/TBRW35/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯35</strong></p><p><a href="https://www.bilibili.com/video/av86082823" target="_blank" rel="noopener">https://www.bilibili.com/video/av86082823</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>东方华灯宴，疯狂屠版中…</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯34</title>
+      <link href="/2020/01/16/TBRW34/"/>
+      <url>/2020/01/16/TBRW34/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯34</strong></p><p><a href="https://www.bilibili.com/video/av83664991" target="_blank" rel="noopener">https://www.bilibili.com/video/av83664991</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>本期的老物是真的很上古老物了，勾起了久远的回忆……</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯33</title>
+      <link href="/2020/01/01/TBRW33/"/>
+      <url>/2020/01/01/TBRW33/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯33</strong></p><p><a href="https://www.bilibili.com/video/av81666268" target="_blank" rel="noopener">https://www.bilibili.com/video/av81666268</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>2020年第一期，元旦快乐！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>跳转弹幕·东方推荐刊 ☯32</title>
+      <link href="/2019/12/16/TBRW32/"/>
+      <url>/2019/12/16/TBRW32/</url>
+      
+        <content type="html"><![CDATA[<p><strong>东方推荐刊 ☯32</strong></p><p><a href="https://www.bilibili.com/video/av79494384" target="_blank" rel="noopener">https://www.bilibili.com/video/av79494384</a></p><blockquote><p>东方推荐刊是为优秀东方作品提供推广途径的bilibili期刊视频，半月一期，童祭等大型活动时通常会出特别刊。<br>目前由本人负责跳转弹幕的发送，具体功能是【点击视频名称时，开新窗口跳转到相应视频】。<br>※由于m9 BAS的弹幕系统限制，想体验跳转弹幕的话，建议使用电脑网页端html5播放器观看。</p></blockquote><p>2019年最后一期w</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 弹幕制作 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> m9 BAS </tag>
+            
+            <tag> bilibili </tag>
+            
+            <tag> 高级弹幕 </tag>
+            
+            <tag> 东方推荐刊 </tag>
             
         </tags>
       
@@ -281,6 +455,62 @@
             <tag> 高级弹幕 </tag>
             
             <tag> 东方推荐刊 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>《千華繚乱》歌词</title>
+      <link href="/2019/04/05/20190405gc/"/>
+      <url>/2019/04/05/20190405gc/</url>
+      
+        <content type="html"><![CDATA[<p><strong>千華繚乱</strong><br>Arranger：Iceon<br>Lyric：かませ虎<br>Vocal：senya<br>Album：幽閉サテライト/千華繚乱<br>原曲：東方永夜抄/竹取飛翔 ～ Lunatic Princess</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=22780386&auto=0&height=66"></iframe><p>千華繚乱　たとえ脆い優しさでも<br><font color="a9a9a9">千华缭乱　当你我彼此依偎</font><br>寄り添えば　心を揺さぶる力を生み出すはずさ<br><font color="a9a9a9"> 哪怕是脆弱的温柔　也会孕育出刻骨铭心的力量吧</font><br><br></p><p>「一人の声は小さい」　「無意味だ」と決めつけて<br><font color="a9a9a9">“一个人的声音过于渺小”　擅自断定“这是毫无意义的啊”</font><br>言葉を飲み込むことは　もう飽きたんだ<br><font color="a9a9a9">因此屡次欲言又止　这种错误　我再也不想重复</font></p><p>笑顔の種を蒔こう　皆、孤独にならぬよう<br><font color="a9a9a9">播下笑容的种子吧　为了大家不再忍受孤独的煎熬</font><br>形は違えど、共に　咲き乱れよう<br><font color="a9a9a9">尽管形态各异　但就让我们一同粲然盛开吧</font></p><p>千華繚乱　たとえ儚きつぼみでも<br><font color="a9a9a9">千华缭乱　尚且娇弱的花蕾啊</font><br>水を与えましょう　僕らの希望が花開くまで<br><font color="a9a9a9">不妨用清水为她滋养吧　直到我们的希望繁花似锦</font></p><p>一人よりも二人へと　優しさの根を張って<br><font color="a9a9a9">与其对影　不如成双　舒展那雍容根须</font><br>緑を絶やさぬように　縁を描く<br><font color="a9a9a9">为了令这抹翠绿生生不息　我勾勒着属于自己的良缘</font></p><p>心の底に潜んだ感情、いざ芽生えよ<br><font color="a9a9a9">心底蛰伏的感情　就在此刻，萌发吐露吧</font><br>大地に君の想いを　知らしめてやれ<br><font color="a9a9a9">请你领略　我对你的思念　蔓延在这片大地</font></p><p>千華繚乱　たとえ短き縁でも<br><font color="a9a9a9">千华缭乱　当你我两相依偎</font><br>寄り添えば　僕らは、大地で繋がった仲間だろう<br><font color="a9a9a9">哪怕是短浅的因缘　我们也将拉近地域的平面紧紧相连</font><br><br></p><p>千華繚乱　たとえ儚きつぼみでも<br><font color="a9a9a9">千华缭乱　尚且娇弱的花蕾啊</font><br>水を与えましょう　僕らの希望が花開くまで<br><font color="a9a9a9">不妨用清水为她滋养吧　直到我们的希望繁花似锦</font></p><p>千華繚乱　たとえ短き縁でも<br><font color="a9a9a9">千华缭乱　当你我彼此依偎</font><br>寄り添えば　僕らは、大地で繋がった仲間だろう<br><font color="a9a9a9"> 哪怕是短浅的因缘　我们都将拉近地域的平面紧紧相连</font><br><br></p><p>歌词翻译来自：<a href="https://thwiki.cc/%E6%AD%8C%E8%AF%8D:%E5%8D%83%E8%8F%AF%E7%B9%9A%E4%B9%B1" target="_blank" rel="noopener">https://thwiki.cc/%E6%AD%8C%E8%AF%8D:%E5%8D%83%E8%8F%AF%E7%B9%9A%E4%B9%B1</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 歌词收集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 东方project同人曲 </tag>
+            
+            <tag> 幽閉サテライト </tag>
+            
+            <tag> senya </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
+      <title>《想ひそめしか》歌词</title>
+      <link href="/2019/04/04/20190404gc/"/>
+      <url>/2019/04/04/20190404gc/</url>
+      
+        <content type="html"><![CDATA[<p><strong>想ひそめしか</strong><br>Lyric：桃梨<br>Arrange：五条下位<br>Vocal：桃梨＆遊女<br>Album：SYNC.ART’S/らぶれす -Loveressive-<br>原曲：東方妖々夢/広有射怪鳥事 ～ Till When?</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=830597&auto=0&height=66"></iframe><p>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>歯车はめぐりゆき<br><font color="a9a9a9">齿轮悠悠不停息</font><br>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>春の色　咲きほこる<br><font color="a9a9a9">春色烂漫遍山野</font></p><p>この子から聞かずとも<br><font color="a9a9a9">其子之声虽未闻</font><br>私にはわかるから<br><font color="a9a9a9">因我已然心领会</font><br>その痛み　もどかしさ<br><font color="a9a9a9">痛楚灼人躁难耐</font><br>それ故の愛しさも<br><font color="a9a9a9">愿由此生爱怜心</font></p><p>胸の奧にある答えを知るべきか<br><font color="a9a9a9">心中答案　是否需知晓</font><br>ひらひら　揺らめく桜花は笑うだけ<br><font color="a9a9a9">悠然飘摇　唯有樱花笑</font><br>そっと髮を撫でる　優しすぎた抱擁<br><font color="a9a9a9">轻抚发丝　拥抱太柔情</font><br>どうしてあなたに心許したか<br><font color="a9a9a9">为何我已　对你心相许</font><br><br></p><p>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>歯车はめぐりゆき<br><font color="a9a9a9">齿轮悠悠不停息</font><br>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>春の色　咲きほこる<br><font color="a9a9a9">春色烂漫遍山野</font></p><p>純粹なこの子には<br><font color="a9a9a9">其子之心纯无瑕</font><br>少しだけ教えるわ<br><font color="a9a9a9">为伊教诲唯一事</font><br>恋は皆　想うだけ<br><font color="a9a9a9">恋心虽皆一厢情</font><br>大切にしたくなる<br><font color="a9a9a9">亦须将之至珍惜</font></p><p>このままあなたが還らずとなったら<br><font color="a9a9a9">若你已然　一去不复回</font><br>過ぎ去るこの世は意味を失くすでしょう<br><font color="a9a9a9">无你之世　意义亦尽失</font><br>それでも私は桜花舞うきざはしへ<br><font color="a9a9a9">毅然踏上　飞花之台阶</font><br>想いをうずめて失くすことはない<br><font color="a9a9a9">此情此意　恒久千万世</font></p><p>胸の奧にある答えを知るべきか<br><font color="a9a9a9">心中答案　是否需知晓</font><br>ひらひら　揺らめく桜花は笑うだけ<br><font color="a9a9a9">悠然飘摇　唯有樱花笑</font><br>そっと髮を撫でる　優しすぎた抱擁<br><font color="a9a9a9">轻抚发丝　拥抱太柔情</font><br>どうしてあなたに心許したか<br><font color="a9a9a9">为何我已　对你心相许</font><br><br></p><p>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>この子から伝わって<br><font color="a9a9a9">其子之声遥相传</font><br>からからら　からからり<br><font color="a9a9a9">喀拉拉　喀拉哩</font><br>我庭よ染まれ<br><font color="a9a9a9">我庭尽染闹春意</font><br><br></p><p>歌词翻译来自：<a href="http://tieba.baidu.com/f?kz=718527080" target="_blank" rel="noopener">http://tieba.baidu.com/f?kz=718527080</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 歌词收集 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 东方project同人曲 </tag>
+            
+            <tag> SYNC.ART&#39;S </tag>
+            
+            <tag> 桃梨 </tag>
+            
+            <tag> 遊女 </tag>
             
         </tags>
       
@@ -2735,9 +2965,9 @@
             
             <tag> VOCALOID </tag>
             
-            <tag> 初音ミク </tag>
-            
             <tag> VOCALOID中文曲 </tag>
+            
+            <tag> 初音ミク </tag>
             
             <tag> solpie </tag>
             
@@ -2903,9 +3133,9 @@
             
             <tag> m8代码弹幕 </tag>
             
-            <tag> m7特殊弹幕 </tag>
-            
             <tag> 普权弹幕 </tag>
+            
+            <tag> m7特殊弹幕 </tag>
             
         </tags>
       
