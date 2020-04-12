@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="author" content="冰火混合物">
+
+
+
+<meta name="description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+<meta name="keywords" content="m9 BAS,bilibili,高级弹幕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="B站m9 BAS“跳转视频按钮”代码">
+<meta property="og:url" content="https://binghuohunhewu.com/2020/04/12/jumpbutton/index.html">
+<meta property="og:site_name" content="幻想の彼方へ">
+<meta property="og:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-04-12T16:37:00.857Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="B站m9 BAS“跳转视频按钮”代码">
+<meta name="twitter:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="幻想の彼方へ" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/tubiao.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>B站m9 BAS“跳转视频按钮”代码 | 幻想の彼方へ</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head></html>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/touxiang.jpg" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">冰火混合物</a></h1>
+        </hgroup>
+
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false">
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class="no-result">No results found <i class="fa fa-spinner fa-pulse"></i></p>
+        
+
+
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/friends/">友情链接</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa bilibili" href="http://space.bilibili.com/17184" title="bilibili"></a>
+                            
+                                <a class="fa LOFTER" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
+                            
+                                <a class="fa Mastodon" href="https://nebula.moe/@binghuohunhewu" title="Mastodon"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                
+                
+
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">冰火混合物</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/touxiang.jpg" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">冰火混合物</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/friends/">友情链接</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa bilibili" target="_blank" href="http://space.bilibili.com/17184" title="bilibili"></a>
+                            
+                                <a class="fa LOFTER" target="_blank" href="http://binghuohunhewu.lofter.com/" title="LOFTER"></a>
+                            
+                                <a class="fa Mastodon" target="_blank" href="https://nebula.moe/@binghuohunhewu" title="Mastodon"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我">
+</nav>
+      <div class="body-wrap"><article id="post-jumpbutton" class="article article-type-post" itemscope="" itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2020/04/12/jumpbutton/" class="article-date">
+      <time datetime="2020-04-12T13:48:08.000Z" itemprop="datePublished">2020-04-12</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      B站m9 BAS“跳转视频按钮”代码
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/弹幕研究/">弹幕研究</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bilibili/">bilibili</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/m9-BAS/">m9 BAS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/高级弹幕/">高级弹幕</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>随着flash播放器的逐步淘汰，B站的高级弹幕在经历了M7和M8之后，进入了m9 BAS高级弹幕时期。<br>作为跟目前的html5播放器适配的高级弹幕，m9 BAS也具有“显示一个按钮，点击按钮后可以跳转到相应目标视频”的功能。</p>
+<p>以下是这个功能的（写给比我还新的新手们看的、可以复制下来自己改的）代码，自己搞的注释，以及在一些场合里的（奇怪）应用方式。</p>
+<h2 id="打开m9-BAS代码模式的方法"><a href="#打开m9-BAS代码模式的方法" class="headerlink" title="打开m9 BAS代码模式的方法"></a>打开m9 BAS代码模式的方法</h2><p>注意：以下步骤可能因未来播放器改版而出现错误或失效。</p>
+<ol>
+<li>打开b站视频网页，点击右上角“弹幕列表”处后面的三个点，打开菜单，选择“BAS弹幕”。</li>
+<li>在BAS弹幕菜单的右上角，选择“代码模式”。</li>
+<li>播放器下方弹出BAS弹幕的代码模式输入框，可以在里面写代码后发送。</li>
+</ol>
+<h2 id="单个跳转按钮适用代码"><a href="#单个跳转按钮适用代码" class="headerlink" title="单个跳转按钮适用代码"></a>单个跳转按钮适用代码</h2><h3 id="av号版本"><a href="#av号版本" class="headerlink" title="av号版本"></a>av号版本</h3><pre><code>def button b {
+  text = &quot;av1714157&quot;
+  x = 30%
+  y = 37%
+  fontSize = 5%
+  textColor = 0xffffff
+  fillColor = 0xFF9100
+  fillAlpha = 0.8
+  zIndex = 1
+  target = av {
+    av = 1714157
+    page = 1
+    time = 20.5s500ms
+  }
+  duration = 2s
+}
+</code></pre><p>解说：</p>
+<blockquote>
+<p>def button b</p>
+</blockquote>
+<p>定义按钮b，b可以随便改成你想起的按钮的名字。</p>
+<blockquote>
+<p>text = “av1714157”</p>
+</blockquote>
+<p>显示文字：把你想显示在按钮上的文字写在引号里面。</p>
+<blockquote>
+<p>x = 30% y = 37%</p>
+</blockquote>
+<p>按钮（左上角）所在的坐标。X是横坐标，Y是纵坐标。<br>不加百分号的话是绝对坐标（像素？），加百分号的时候是以播放器显示区域的宽度和高度为1，坐标为百分比。<br>无法确定坐标时，可以展开BAS弹幕的代码模式输入框，点击“坐标拾取”键，选择你想要放置按钮的地方，记下相应的百分比坐标。<br>因播放器大小与个人电脑屏幕设置有关，使用绝对坐标可能导致按钮错位，建议使用百分比坐标。</p>
+<blockquote>
+<p>fontSize = 5%</p>
+</blockquote>
+<p>按钮上的文字（就是上面那个text的内容）的字号。<br>同样是可以使用绝对字号和百分比字号，也同样建议使用百分比字号。<br>由于没有对按钮宽度高度的设置，字号的大小间接决定了按钮的大小，请注意。</p>
+<blockquote>
+<p>textColor = 0xffffff<br>fillColor = 0xFF9100</p>
+</blockquote>
+<p>textColor：按钮上的文字的颜色。fillColor：填充按钮本身的颜色。<br>例：textColor = 蓝色，fillColor = 白色，生成的按钮会是白色按钮，同时上面写着蓝色的字。<br>0xffffff和0xFF9100是html颜色代码，0x是固定前缀。<br>寻找颜色时可以展开BAS弹幕的代码模式输入框，点击“颜色拾取”键，鼠标挑选你想要的颜色并记下代码，或者搜索关键字【html颜色代码】。</p>
+<blockquote>
+<p>fillAlpha = 0.8</p>
+</blockquote>
+<p>按钮的透明度。完全透明是0，完全不透明是1。请根据自己需要填写。</p>
+<blockquote>
+<p>zIndex = 1</p>
+</blockquote>
+<p>层数。写在这里的数值越大，则该条弹幕在越上层。<br>……但是仅限于m9 bas的弹幕内部比较，其他弹幕全都在bas上面……</p>
+<blockquote>
+<p>target = av {<br>  av = 1714157<br>  page = 1<br>  time = 20.5s500ms<br>  }</p>
+</blockquote>
+<p>对跳转的目标视频进行设置。<br>av = 1714157　：在这里写上目标视频的av号。<br>page = 1　：当视频有多个分P时，指定跳转到第几P。<br>time = 20.5s500ms　：指定跳转到该视频的第几分钟。时间单位支持m（秒）和ms（毫秒）。</p>
+<blockquote>
+<p>duration = 2s</p>
+</blockquote>
+<p>持续时间。按钮的存活时间。<br>在不设置“持续时间”时，默认的按钮存活时间是4s。<br>需要对按钮的特性进行改变时，建议删除duration条目，改为设置简单动画。见下条。</p>
+<blockquote>
+<p>set b{} 7s then set b{x = 5%} 1s</p>
+</blockquote>
+<p>简单动画。在需要改变按钮的部分设置时使用。<br>根据个人需求，可以写出不同的动作。具体写法可见下方【BV号版本】。<br>例：<br>set b{} 7s then set b{x = 5%} 1s<br>设定按钮b（在前面的设置不改变的情况下）存活7s，然后移动至横坐标x=5%，移动耗时1s。</p>
+<p><strong>以上代码的条目（属性）先后顺序对效果没有影响。</strong><br><strong>在搞清楚各条目（属性）对应的含义后，可以根据自身要求对相应部分的代码进行删减或添加。</strong><br><strong>但是务必注意：一定要让括号闭合，有前括号就必须有对应的后括号，否则代码无法正常执行。</strong></p>
+<h3 id="BV号版本"><a href="#BV号版本" class="headerlink" title="BV号版本"></a>BV号版本</h3><pre><code>def button b {
+  text = &quot;BV1i7411M7N9&quot;
+  x = 30%
+  y = 37%
+  fontSize = 5%
+  textColor = 0xffffff
+  fillColor = 0xFF9100
+  fillAlpha = 0.8
+  zIndex = 1
+  target = av {
+    bvid = BV1i7411M7N9
+    page = 1
+    time = 20.5s500ms
+  }
+}
+set b{
+   x = 30%
+} 7s
+then set b{
+    x = 5%
+} 1s
+</code></pre><p>解说：除了把“av = 12345”换成了“bvid = BVQWERT”之外，没有区别……</p>
+<h2 id="多个跳转按钮适用代码"><a href="#多个跳转按钮适用代码" class="headerlink" title="多个跳转按钮适用代码"></a>多个跳转按钮适用代码</h2><p>在为周刊类或者推荐刊类视频制作跳转弹幕时，以上代码就会显得比较麻烦了。<br>周刊类视频通常会有十多个甚至数十个视频推荐，一个一个发的话就要输入十几遍几十遍，次数一多就很容易出错。<br>但是因为按钮本身的部分属性限制，一般的写法难以起效。<br>在此提供一个可行的处理方式，特别感谢：想出了这个点子的hello80。</p>
+<pre><code>//东方推荐刊跳转弹幕示例by冰火混合物，感谢hello80协助
+def button BT1 {
+  text = &quot;　\n　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&quot;
+  x = -1000%
+  y = -1000%
+  fontSize = 2.5%
+  textColor = 0xffffff
+  fillColor = 0xFFffff
+  fillAlpha = 0.2
+  zIndex = 1
+  target = av {
+    bvid = BV1bs411r7Z6  
+    page = 1
+    time = 0ms
+  }
+}
+def button BT2 {
+  text = &quot;　\n　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　&quot;
+  x = -1000%
+  y = -1000%
+  fontSize = 2.5%
+  textColor = 0xffffff
+  fillColor = 0xFFffff
+  fillAlpha = 0.2
+  zIndex = 1
+  target = av {
+    bvid = BV12E411A7Rd  
+    page = 1
+    time = 0ms
+  }
+}
+def button BTX以下省略
+
+set BT1{} 71150ms then set BT1{x = 20% y = 87%}0ms then set BT1{x = 20% y = 87%} 11000ms
+set BT2{} 107210ms then set BT2{x = 20% y = 87%}0ms then set BT2{x = 20% y = 87%} 11000ms
+set BTX{}以下省略
+</code></pre><p>解说：<br>主催要求：推荐刊视频内有每个被推荐视频的标题，让观众点击标题就能直接跳转到对应视频。</p>
+<ol>
+<li>选定按钮左上角所在的百分比坐标，调整字号、使用空格占位、\n进行换行（text和fontsize），扩充按钮的覆盖面积，使之完全遮盖住视频内的标题区域，方便观众点击。</li>
+<li>将按钮底色设为白色（fillColor = 0xFFffff），透明度调整为0.2（fillAlpha = 0.2），覆盖的同时透出视频上的标题内容。</li>
+<li>使用了简单动画，实现“一条弹幕发几十个按钮”的需求。<ul>
+<li>首先，将该按钮的坐标设置到播放器外面去（x = -1000% y = -1000%，负数坐标，按钮已经在播放器外面了所以不会被看到）。</li>
+<li>动画第一步设置为“该按钮在屏幕外等待M秒”（set BT1{} Mms），M = 这个按钮需要出现在视频的第几秒。在第M秒，需要该按钮上场的时间段，进行动画第二步。</li>
+<li>第二步：让屏幕外面的按钮飞到它该在的位置上，这个“飞”的动作耗时0秒。（then set BT2{x = 正确坐标 y = 正确坐标}0ms）</li>
+<li>第三步：让按钮在正确的位置上存活N秒，消失。（then set BT2{x = 正确坐标 y = 正确坐标} Nms）</li>
+</ul>
+</li>
+<li>因为视频里的标题并不是一直存在，所以按钮也不是一直都在的。后来我用另外一组按钮代码，在右上角补充了一波按钮。</li>
+<li>按照这个格式把整个推荐刊的视频全部在本地写完（写的时候记得随时保存），复制到BAS弹幕的代码模式输入框，在0秒处点“测试效果”测试一下是否有错误。</li>
+<li>确认无误后，设置弹幕出现时间为“0毫秒”，点击“发送弹幕”。发送后要稍微等一两分钟，直接关掉的话可能没发出去……</li>
+<li>为了不影响观看，覆盖标题的按钮透明度很低，以至于一般观众都注意不到233所以我在按钮上方补了一条颜色鲜亮的滚动提示“↓点击视频标题直接跳转”，这样比较能引起注意。</li>
+<li>个人推荐使用notepad++或者是其他专门写代码的程序来写代码，用记事本来写的话太折磨了……</li>
+</ol>
+<hr>
+<p>现在up主应该都可以在自己的视频里发bas弹幕了，希望这个乱七八糟的总结能起到一点小小的作用，作为弱鸡我只能帮大家到这里了_(X3」∠)_</p>
+<p>关联阅读：<br>m9 BAS代码参考文档：<a href="https://bilibili.github.io/bas/#/guide" target="_blank" rel="noopener">https://bilibili.github.io/bas/#/guide</a><br>m9 BAS内测情况及使用记录：<a href="https://binghuohunhewu.com/2019/02/08/m9%20BAS">https://binghuohunhewu.com/2019/02/08/m9%20BAS</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/04/12/jumpbutton/">B站m9 BAS“跳转视频按钮”代码</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">冰火混合物</a></p>
+        <p><span>发布时间:</span>2020-04-12, 21:48:08</p>
+        <p><span>最后更新:</span>2020-04-13, 00:37:00</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/04/12/jumpbutton/" title="B站m9 BAS“跳转视频按钮”代码">https://binghuohunhewu.com/2020/04/12/jumpbutton/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://binghuohunhewu.com/2020/04/12/jumpbutton/　　作者: 冰火混合物" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target="_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/04/01/BVtoAV/">
+                    如何查看已显示为BV号的视频的av号
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#打开m9-BAS代码模式的方法"><span class="toc-number">1.</span> <span class="toc-text">打开m9 BAS代码模式的方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#单个跳转按钮适用代码"><span class="toc-number">2.</span> <span class="toc-text">单个跳转按钮适用代码</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#av号版本"><span class="toc-number">2.1.</span> <span class="toc-text">av号版本</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#BV号版本"><span class="toc-number">2.2.</span> <span class="toc-text">BV号版本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#多个跳转按钮适用代码"><span class="toc-number">3.</span> <span class="toc-text">多个跳转按钮适用代码</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"B站m9 BAS“跳转视频按钮”代码　| 幻想の彼方へ　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section id="comments" style="margin: 2em; padding: 2em; background: rgba(255, 255, 255, 0.5)">
+    <div id="vcomment" class="comment"></div>
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script>
+    <script>
+      new Valine({
+        el: '#vcomment',
+        notify: 'false',
+        verify: 'false',
+        app_id: "6rrd6V76yvw2FJ1mNlh0f9m2-MdYXbMMI",
+        app_key: "NfCN6kd2g1XVchldKwfTPu4p",
+        placeholder: "远方的来客，欢迎您进入幻想。",
+        avatar: "identicon"
+      });
+    </script>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/04/01/BVtoAV/" title="下一篇: 如何查看已显示为BV号的视频的av号">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/04/12/jumpbutton/">B站m9 BAS“跳转视频按钮”代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/04/01/BVtoAV/">如何查看已显示为BV号的视频的av号</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/04/01/TBRW39/">跳转弹幕·东方推荐刊 ☯39</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/02/personalblog/">针对产出者的自搭博客选择指南</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/02/TBRW37/">跳转弹幕·东方推荐刊 ☯37</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/03/02/TBRW38/">跳转弹幕·东方推荐刊 ☯38</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/16/TBRW36/">跳转弹幕·东方推荐刊 ☯36</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/02/01/TBRW35/">跳转弹幕·东方推荐刊 ☯35</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/16/TBRW34/">跳转弹幕·东方推荐刊 ☯34</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/01/01/TBRW33/">跳转弹幕·东方推荐刊 ☯33</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/16/TBRW32/">跳转弹幕·东方推荐刊 ☯32</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/12/01/TBRW31/">跳转弹幕·东方推荐刊 ☯31</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/16/TBRW30/">跳转弹幕·东方推荐刊 ☯30</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/11/02/TBRW29/">跳转弹幕·东方推荐刊 ☯29</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/16/TBRW28/">跳转弹幕·东方推荐刊 ☯28</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/06/201910bangumi/">2019年10月新番，随便看随便写</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/10/01/TBRW27/">跳转弹幕·东方推荐刊 ☯27</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/16/TBRW26/">跳转弹幕·东方推荐刊 ☯26</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/09/01/TBRW25/">跳转弹幕·东方推荐刊 ☯25</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/08/16/TBRW24/">跳转弹幕·东方推荐刊 ☯24</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/07/20190407gc/">《彼方此方》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/06/20190406gc/">《番凩》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/05/20190405gc/">《千華繚乱》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/04/20190404gc/">《想ひそめしか》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/03/20190403gc/">《神々が愛した楽園 ～Belle Isle～》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/02/20190402gc/">《終端の王と異世界の騎士 ～The Endia & The Knights～》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/04/01/20190401gc/">《永遠のメロディ》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/31/20190331gc/">《ローリンガール》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/30/20190330gc/">《Darling Star》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/29/20190329gc/">《風のレイルロード》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/28/20190328gc/">《ピアノとvocalの為の萃香八番～孤独》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/27/20190327gc/">《Spring Comes Along》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/26/20190326gc/">《magnet》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/25/20190325gc/">《Get the star for you》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/24/20190324gc/">《before the dawn》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/23/20190323gc/">《いろは唄》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/22/20190322gc/">《Providing the atmosphere》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/21/20190321gc/">《Everspiral》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/20/20190320gc/">《REAL THING》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/19/20190319gc/">《砕月～天零萃夢》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/18/20190318gc/">《深海少女》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/17/20190317gc/">《夏陽炎》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/16/20190316gc/">《VOiCE》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/15/20190315gc/">《クロスマインド》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/14/20190314gc/">《時を刻む唄》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/13/20190313gc/">《Dial Connected》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/12/20190312gc/">《God Knows》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/11/20190311gc/">《月に叢雲華に風》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/10/20190310gc/">《トルコ行進曲 － オワタ＼(^o^)／》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/10/20190310danmu/">歌词弹幕·《土耳其进行曲—完蛋啦＼(^o^)／》</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/09/20190309gc/">《幻奏ノ滝》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/08/20190308gc/">《蛙石》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/07/20190307gc/">《カレイドスコープ》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/06/20190306gc/">《celebrate the colors tonight》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/05/20190305gc/">《氷結娘》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/04/20190304gc/">《Alice Maestera》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/03/20190303gc/">《I'm Here》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/02/20190302gc/">《Angel on tree》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/03/01/20190301gc/">《50% Alive'n'Dead》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/28/20190228gc/">《そんなゆめをみたの ～lonely dreaming girl～》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/27/20190227gc/">《桜色古物語》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/26/20190226gc/">《ポーカーフェイス》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/25/20190225gc/">《ロスト バタフライ》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/24/20190224gc/">《Marquis de 3rd》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/23/20190223gc/">《Jealousy》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/22/20190222gc/">《Ghost on the moon》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/21/20190221gc/">《behind the heart》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/20/20190220gc/">《THE EVENING STAR》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/19/20190219gc/">《星色夜空》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/18/20190218gc/">《Pages》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/17/20190217gc/">《有心論》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/16/20190216gc/">《閉ざされた境界線》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/15/20190215gc/">《大事なものは目蓋の裏》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/14/20190214gc/">《約束》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/13/20190213gc/">《Lacrima》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/12/20190212gc/">《揺らめく水面に落ちる月》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/11/20190211gc/">《trick and treat》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/10/20190210gc/">《Who killed U.N.Owen》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/09/20190209gc/">《Undefined》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/m9 BAS/">m9 BAS内测情况及使用记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/08/20190208gc/">《Opposite World》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/02/01/20190201gc/">《恋人を射ち堕とした日》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/31/20190131gc/">《风萤月》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/27/20190127gc/">《その扉の向こうに》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/22/20190122gc/">《なまえのないうた》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/21/20190121gc/">《小さなてのひら》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/20/20190120gc/">《because of you》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/19/20190119gc/">《とある妖の観測的美学》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/18/20190118gc/">《弱虫モンブラン》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/17/20190117gc/">《死してなお、届かぬ想い》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/16/20190116gc/">《vivi》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/15/20190115gc/">《やさしさの種子》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/14/20190114gc/">《Little Traveler》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/13/20190113gc/">《恋爱サーキュレーション》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/12/20190112gc/">《PONPONPON》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/11/20190111gc/">《Tsubasa》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/10/20190110gc/">《戯言スピーカー》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/09/20190109gc/">《everlasting》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/08/20190108gc/">《コミュニケーション・ブレイクダンス》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/07/20190107gc/">《⑨destiny ～ ずっとチルノのターン》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/06/20190106gc/">《ケロ⑨destiny》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/05/20190105gc/">《チルノのパーフェクトさんすう教室》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/04/20190104gc/">《蛍》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/03/20190103gc/">《唯然う在る様に》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/02/20190102gc/">《天空の狂詩曲》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/01/20190101gc/">《どうして…》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/31/20181231gc/">《Legend of symmetry》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/30/20181230gc/">《Prisoner Of Love》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/29/20181229gc/">《砂鉄の国のアリス》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/28/20181228gc/">《Let Me Be With You》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/27/20181227gc/">《ブクレシュティの人形師－＜RetroAtmosphere＞》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/26/20181226gc/">《篝火蛍》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/25/20181225gc/">《Phantasmagoria -弾幕結界-》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/24/20181224gc/">《サンドリヨン》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/23/20181223gc/">《三月雨》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/22/20181222gc/">《晓秋月明》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/21/20181221gc/">《Call Your Name》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/20/20181220gc/">《アイネクライネ》歌词</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/15/cmxqihua/">草莓县企划人设</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/12/darlingstar/">弹幕新坑记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/11/byebyeyesterday/">《Byebye Yesterday》制作记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/10/erjiejilu/">第二届b站弹幕赛小记录</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/09/xitongjishi/">Bilibili弹幕系统大事记</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/08/shadiaopaotuan/">论：跑团大失败时会发生什么</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/07/biansedaima/">B站变色闪烁代码应用问题的应用相关</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/06/jiajiaokaoju/">并盛国中校舍建筑小分析</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/COCTrpg/">coc trpg replay　个人口味收集整理</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/12/05/20181205/">博客搭好啦！(°∀°)ﾉ</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2018-2020 冰火混合物
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style="display:none">
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style="display:none">
+                        <span id="page-visit" title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "✲ Rondo of fantasy ✲" + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = " " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
