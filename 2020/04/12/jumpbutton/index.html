@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+<meta name="description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能">
 <meta name="keywords" content="m9 BAS,bilibili,高级弹幕">
 <meta property="og:type" content="article">
 <meta property="og:title" content="B站m9 BAS“跳转视频按钮”代码">
 <meta property="og:url" content="https://binghuohunhewu.com/2020/04/12/jumpbutton/index.html">
 <meta property="og:site_name" content="幻想の彼方へ">
-<meta property="og:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+<meta property="og:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-04-12T16:37:00.857Z">
+<meta property="og:updated_time" content="2020-04-13T06:06:38.481Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="B站m9 BAS“跳转视频按钮”代码">
-<meta name="twitter:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能的代码使用总结">
+<meta name="twitter:description" content="使用m9 BAS高级弹幕代码，在B站的视频里实现“点击按钮跳转到目标视频”功能">
 
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
@@ -255,7 +255,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>随着flash播放器的逐步淘汰，B站的高级弹幕在经历了M7和M8之后，进入了m9 BAS高级弹幕时期。<br>作为跟目前的html5播放器适配的高级弹幕，m9 BAS也具有“显示一个按钮，点击按钮后可以跳转到相应目标视频”的功能。</p>
+        <p>随着flash播放器的逐步淘汰，B站的高级弹幕在经历了M7和M8之后，进入了m9 BAS高级弹幕时期。<br>作为跟目前的html5播放器适配的高级弹幕，m9 BAS也具有“显示一个按钮，点击按钮后可以跳转到相应目标视频”的功能。<br>现在UP主可以在自己的视频里发m9 BAS了，像是“系列视频”或者“相关视频”之类的，都可以加上这个按钮，方便视频之间的联动。</p>
 <p>以下是这个功能的（写给比我还新的新手们看的、可以复制下来自己改的）代码，自己搞的注释，以及在一些场合里的（奇怪）应用方式。</p>
 <h2 id="打开m9-BAS代码模式的方法"><a href="#打开m9-BAS代码模式的方法" class="headerlink" title="打开m9 BAS代码模式的方法"></a>打开m9 BAS代码模式的方法</h2><p>注意：以下步骤可能因未来播放器改版而出现错误或失效。</p>
 <ol>
@@ -320,7 +320,7 @@
 <p>set b{} 7s then set b{x = 5%} 1s</p>
 </blockquote>
 <p>简单动画。在需要改变按钮的部分设置时使用。<br>根据个人需求，可以写出不同的动作。具体写法可见下方【BV号版本】。<br>例：<br>set b{} 7s then set b{x = 5%} 1s<br>设定按钮b（在前面的设置不改变的情况下）存活7s，然后移动至横坐标x=5%，移动耗时1s。</p>
-<p><strong>以上代码的条目（属性）先后顺序对效果没有影响。</strong><br><strong>在搞清楚各条目（属性）对应的含义后，可以根据自身要求对相应部分的代码进行删减或添加。</strong><br><strong>但是务必注意：一定要让括号闭合，有前括号就必须有对应的后括号，否则代码无法正常执行。</strong></p>
+<p><strong>以上代码的条目（属性）先后顺序对效果没有影响。</strong><br><strong>在搞清楚各条目（属性）对应的含义后，可以根据自身要求对相应部分的代码进行删减或添加。</strong><br><strong>写好之后点“测试效果”测试一下，没有问题的话，在需要按钮的时间点暂停，点击“发送弹幕”发出代码弹幕。</strong><br><strong>注意：代码部分务必用英文字母和半角符号来写，一定要让括号闭合，误用了全角字母和符号、缺少半截括号等情况会使代码无法正常执行。</strong></p>
 <h3 id="BV号版本"><a href="#BV号版本" class="headerlink" title="BV号版本"></a>BV号版本</h3><pre><code>def button b {
   text = &quot;BV1i7411M7N9&quot;
   x = 30%
@@ -398,7 +398,7 @@ set BTX{}以下省略
 <li>个人推荐使用notepad++或者是其他专门写代码的程序来写代码，用记事本来写的话太折磨了……</li>
 </ol>
 <hr>
-<p>现在up主应该都可以在自己的视频里发bas弹幕了，希望这个乱七八糟的总结能起到一点小小的作用，作为弱鸡我只能帮大家到这里了_(X3」∠)_</p>
+<p>希望这个乱七八糟的总结能起到一点小小的作用，作为弱鸡我只能帮大家到这里了_(X3」∠)_</p>
 <p>关联阅读：<br>m9 BAS代码参考文档：<a href="https://bilibili.github.io/bas/#/guide" target="_blank" rel="noopener">https://bilibili.github.io/bas/#/guide</a><br>m9 BAS内测情况及使用记录：<a href="https://binghuohunhewu.com/2019/02/08/m9%20BAS">https://binghuohunhewu.com/2019/02/08/m9%20BAS</a></p>
 
       
@@ -411,7 +411,7 @@ set BTX{}以下省略
         <p><span>本文标题:</span><a href="/2020/04/12/jumpbutton/">B站m9 BAS“跳转视频按钮”代码</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">冰火混合物</a></p>
         <p><span>发布时间:</span>2020-04-12, 21:48:08</p>
-        <p><span>最后更新:</span>2020-04-13, 00:37:00</p>
+        <p><span>最后更新:</span>2020-04-13, 14:06:38</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2020/04/12/jumpbutton/" title="B站m9 BAS“跳转视频按钮”代码">https://binghuohunhewu.com/2020/04/12/jumpbutton/</a>
             <span class="copy-path" data-clipboard-text="原文: https://binghuohunhewu.com/2020/04/12/jumpbutton/　　作者: 冰火混合物" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
